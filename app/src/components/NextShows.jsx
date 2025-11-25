@@ -1,10 +1,10 @@
 import React from "react";
-import { useCart } from "../contexts/CartContext"; // Importar hook
+import { useCart } from "../contexts/CartContext";
 
 const shows = [
-  { date: "12 Dez 2025", city: "São Paulo, SP", venue: "Audio Club" },
-  { date: "19 Dez 2025", city: "Rio de Janeiro, RJ", venue: "Vivo Rio" },
-  { date: "08 Jan 2026", city: "Curitiba, PR", venue: "Ópera de Arame" }
+  { id: 1, date: "12 Dez 2025", city: "São Paulo, SP", venue: "Audio Club", price: 150.00 },
+  { id: 2, date: "19 Dez 2025", city: "Rio de Janeiro, RJ", venue: "Vivo Rio", price: 130.00 },
+  { id: 3, date: "08 Jan 2026", city: "Curitiba, PR", venue: "Ópera de Arame", price: 120.00 },
 ];
 
 const NextShows = () => {
@@ -22,6 +22,7 @@ const NextShows = () => {
             <span className="text-indigo-400 text-sm font-medium mb-2 tracking-wide">{show.date}</span>
             <h3 className="text-white text-xl font-semibold mb-1">{show.city}</h3>
             <p className="text-neutral-400">{show.venue}</p>
+            <span className="text-green-400 text-sm font-medium mb-2 tracking-wide">R$ {show.price}</span>
             
             <button 
               onClick={() => addToCart(show)}
