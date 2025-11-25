@@ -6,10 +6,11 @@ const Banner = () => {
       {/* Vídeo de fundo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/assets/background.mp4"
+        src="../public/assets/background.mp4" 
         autoPlay
         loop
         muted
+        playsInline // Essencial para autoplay em mobile
       />
 
       {/* Overlay escuro */}
@@ -25,6 +26,9 @@ const Banner = () => {
             Dia 19 a 21 de Julho de 2024
         </p>
       </div>
+
+      {/* Gradiente de transição para o NextShows (neutral-950) */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-neutral-950 to-transparent z-20 pointer-events-none"></div>
     </section>
   );
 };

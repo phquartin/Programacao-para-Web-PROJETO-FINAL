@@ -1,16 +1,20 @@
-import Banner from './components/Banner'
-import React from 'react'
 import './index.css'
-import NextShows from './components/NextShows.jsx'
+import React from "react";
+import Banner from "./components/Banner";
+import NextShows from "./components/NextShows";
+import PromoteEvent from "./components/PromoteEvent";
+import FloatingCart from "./components/FloatingCart";
+import { CartProvider } from "./contexts/CartContext";
 
-function App() {
-
+const App = () => {
   return (
-    <div>
-      <Banner></Banner>
-      <NextShows></NextShows>
-    </div>
-  )
-}
+    <CartProvider>
+      <Banner />
+      <NextShows />
+      <PromoteEvent />
+      <FloatingCart />
+    </CartProvider>
+  );
+};
 
-export default App
+export default App;
