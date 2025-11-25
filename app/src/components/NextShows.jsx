@@ -2,9 +2,9 @@ import React from "react";
 import { useCart } from "../contexts/CartContext"; // Importar hook
 
 const shows = [
-  { date: "12 Dez 2025", city: "São Paulo, SP", venue: "Audio Club" },
-  { date: "19 Dez 2025", city: "Rio de Janeiro, RJ", venue: "Vivo Rio" },
-  { date: "08 Jan 2026", city: "Curitiba, PR", venue: "Ópera de Arame" }
+  { id: 1, date: "12 Dez 2025", city: "São Paulo, SP", venue: "Audio Club" },
+  { id: 2, date: "19 Dez 2025", city: "Rio de Janeiro, RJ", venue: "Vivo Rio" },
+  { id: 3, date: "08 Jan 2026", city: "Curitiba, PR", venue: "Ópera de Arame" }
 ];
 
 const NextShows = () => {
