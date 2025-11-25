@@ -1,4 +1,3 @@
-import './index.css'
 import React from "react";
 import Banner from "./components/Banner";
 import NextShows from "./components/NextShows";

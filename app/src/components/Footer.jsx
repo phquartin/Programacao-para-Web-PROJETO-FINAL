@@ -30,7 +30,7 @@ const Footer = () => {
             {/* Coluna 2 */}
             <div className="flex flex-col gap-3">
               <h4 className="font-bold uppercase mb-2 text-sm tracking-wider">Nossas Operações</h4>
-              <a href="#" className="text-neutral-400 hover:text-white text-sm transition">Faça seu Evento hypar</a>
+              <a href="/divulgar" className="text-neutral-400 hover:text-white text-sm transition">Faça seu Evento hypar</a>
               <a href="#" className="text-neutral-400 hover:text-white text-sm transition">Mané Mercado</a>
               <a href="#" className="text-neutral-400 hover:text-white text-sm transition">HYPE Festival</a>
             </div>
