@@ -17,7 +17,6 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // NOVO: Remove item independentemente da quantidade
   const removeFromCart = (id) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
