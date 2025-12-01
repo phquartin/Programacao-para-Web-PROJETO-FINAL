@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useCart } from "../contexts/CartContext";
+import { useNavigate } from "react-router";
 
 const FloatingCart = () => {
   const { cartItems, updateQuantity, removeFromCart, totalItems, cartTotal } = useCart();
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const formatCurrency = (value) => 
     new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
@@ -90,7 +92,13 @@ const FloatingCart = () => {
               <span className="text-2xl font-bold text-white">{formatCurrency(cartTotal)}</span>
             </div>
 
-            <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition">
+            <button 
+              onClick={() => {
+                setIsOpen(false); // Fecha o modal
+                navigate("/checkout"); // Vai para checkout (Auth vai interceptar se não logado)
+              }}
+              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition"
+            >
               Finalizar Compra
             </button>
           </div>
